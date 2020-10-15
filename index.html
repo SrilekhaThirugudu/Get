@@ -19,7 +19,18 @@
           console.log("Anonimous function");
         });
         const url="https://jsonplaceholder.typicode.com/users";// short cut way of all the above functions 
-        fetch(url).then(response => response.json()).then(json => console.log(json))
+        fetch(url).then((response)=> response.json()).then((json) => {console.log(json);
+        const list=document.createElement("ol");
+        list.style.backgroundColor="lightgreen";
+        for(let i=0;i<json.length;j++)
+        {
+          const listitem=document.createElement("li");
+          listitem.innerHTML=json[i].name;
+          list.appendChild(listitem);
+        }
+        const d1=document.getElementById("id1");
+        
+        });
         
       }
       //const funvariable=() => "123"// Anonimous arrow function
