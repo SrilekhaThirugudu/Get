@@ -1,0 +1,39 @@
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <script>
+      
+      function getData(){
+       //Java Script Object Notation(JSON) 
+        // In JSON all keys are string
+        const url2="";
+        /*//then  takes a function, excutes it with 
+        //the return value of the previous promise or then
+        //returns a new premise or data.*/
+        fetch(url2).then(funvariable).then(function (r){
+          console.log("return val of ()", r);
+        });//then only takes a functions
+        const url1="";
+        fetch(url1)//promises
+        .then(function (){//Anonimous function is function without name
+          console.log("Anonimous function");
+        });
+        const url="https://jsonplaceholder.typicode.com/users";// short cut way of all the above functions 
+        fetch(url).then(response => response.json()).then(json => console.log(json))
+        
+      }
+      //const funvariable=() => "123"// Anonimous arrow function
+      const funvariable=function (){
+        return "123";
+      };
+    </script>
+    <!-- <link rel="stylesheet" type="text/css" href="styles.css"> -->
+  </head>
+  <body>
+  <div id="id1" class="myclass"></div>
+  <!--<div class="myclass"></div>
+  <div class="myclass"></div>-->
+  <button onclick="getData()">Get Data</button>
+  <div></div>
+  </body>
+</html>
